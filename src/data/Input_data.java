@@ -46,6 +46,8 @@ public class Input_data {
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JTextField textField_14;
+	private JTextField textField_15;
+	private JTextField textField_16;
 
 	/**
 	 * Launch the application.
@@ -78,7 +80,7 @@ public class Input_data {
 		frmNationalLaborRelations.setTitle("National Labor Relations Commission(DATA)");
 		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data.class.getResource("/images/logo.png")));
 		frmNationalLaborRelations.getContentPane().setBackground(Color.DARK_GRAY);
-		frmNationalLaborRelations.setBounds(100, 100, 939, 768);
+		frmNationalLaborRelations.setBounds(100, 100, 939, 647);
 		frmNationalLaborRelations.setResizable(false);
 		frmNationalLaborRelations.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmNationalLaborRelations.getContentPane().setLayout(null);
@@ -126,15 +128,15 @@ public class Input_data {
 		panel.add(label);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(0, 124, 933, 616);
+		panel_1.setBounds(0, 124, 933, 495);
 		frmNationalLaborRelations.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("NLRC CASE NO.");
 		lblNewLabel_1.setForeground(Color.BLACK);
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 17));
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 19));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(10, 11, 409, 33);
+		lblNewLabel_1.setBounds(10, 11, 874, 33);
 		panel_1.add(lblNewLabel_1);
 		
 		JSeparator separator = new JSeparator();
@@ -286,34 +288,26 @@ public class Input_data {
 		textField_12.setBounds(595, 278, 206, 26);
 		panel_1.add(textField_12);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Female");
-		chckbxNewCheckBox.setBounds(10, 311, 97, 23);
-		panel_1.add(chckbxNewCheckBox);
-		
-		JCheckBox chckbxMale = new JCheckBox("Male");
-		chckbxMale.setBounds(213, 311, 97, 23);
-		panel_1.add(chckbxMale);
-		
 		JLabel lblLa = new JLabel("LA                 :");
 		lblLa.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLa.setFont(new Font("Arial", Font.BOLD, 14));
-		lblLa.setBounds(475, 341, 108, 26);
+		lblLa.setBounds(475, 315, 108, 26);
 		panel_1.add(lblLa);
 		
 		textField_13 = new JTextField();
 		textField_13.setColumns(10);
-		textField_13.setBounds(595, 341, 206, 26);
+		textField_13.setBounds(595, 315, 206, 26);
 		panel_1.add(textField_13);
 		
 		JLabel lblDateMailedBy = new JLabel("Date mailed by RAB/SRAB :");
 		lblDateMailedBy.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDateMailedBy.setFont(new Font("Arial", Font.BOLD, 14));
-		lblDateMailedBy.setBounds(10, 341, 194, 26);
+		lblDateMailedBy.setBounds(10, 352, 194, 26);
 		panel_1.add(lblDateMailedBy);
 		
 		textField_14 = new JTextField();
 		textField_14.setColumns(10);
-		textField_14.setBounds(213, 341, 206, 26);
+		textField_14.setBounds(213, 353, 206, 26);
 		panel_1.add(textField_14);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -322,5 +316,33 @@ public class Input_data {
 		separator_1.setOrientation(SwingConstants.VERTICAL);
 		separator_1.setBounds(449, 57, 2, 393);
 		panel_1.add(separator_1);
+		
+		JLabel lblFemale = new JLabel("Female    :");
+		lblFemale.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFemale.setFont(new Font("Arial", Font.BOLD, 14));
+		lblFemale.setBounds(10, 315, 80, 26);
+		panel_1.add(lblFemale);
+		
+		textField_15 = new JTextField();
+		textField_15.setColumns(10);
+		textField_15.setBounds(100, 315, 110, 26);
+		panel_1.add(textField_15);
+		
+		JLabel lblMale = new JLabel("Male      :");
+		lblMale.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMale.setFont(new Font("Arial", Font.BOLD, 14));
+		lblMale.setBounds(213, 315, 80, 26);
+		panel_1.add(lblMale);
+		
+		textField_16 = new JTextField();
+		textField_16.setColumns(10);
+		textField_16.setBounds(303, 315, 116, 26);
+		panel_1.add(textField_16);
+		
+		JSeparator separator_2 = new JSeparator();
+		separator_2.setBackground(Color.LIGHT_GRAY);
+		separator_2.setForeground(Color.DARK_GRAY);
+		separator_2.setBounds(475, 252, 416, 2);
+		panel_1.add(separator_2);
 	}
 }
