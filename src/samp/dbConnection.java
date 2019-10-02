@@ -11,8 +11,8 @@ public class dbConnection {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.1.8:3306/nlrc","root","");
-			JOptionPane.showMessageDialog(null, "Connection Successful!");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.1.5:3306/nlrc","root","");
+//			JOptionPane.showMessageDialog(null, "Connection Successful!");
 			return conn;
 		}catch(Exception e)
 		{

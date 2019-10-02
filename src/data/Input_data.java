@@ -16,7 +16,11 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.TitledBorder;
+
+import samp.dbConnection;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -27,8 +31,17 @@ import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.awt.event.ActionEvent;
 
 public class Input_data {
+	Connection connection = null;
+	
 
 	private JFrame frmNationalLaborRelations;
 	private JTextField textField;
@@ -70,6 +83,7 @@ public class Input_data {
 	 */
 	public Input_data() {
 		initialize();
+		connection=dbConnection.dbConnector();
 	}
 
 	/**
@@ -344,5 +358,24 @@ public class Input_data {
 		separator_2.setForeground(Color.DARK_GRAY);
 		separator_2.setBounds(475, 252, 416, 2);
 		panel_1.add(separator_2);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try
+				{
+					Statement data = connection.createStatement();
+					String query="insert into nlrc_data (CNum, Title, Date_app_nlrc) values ('1', '2-18-1998', '2-19-1998')";
+					data.executeUpdate(query);
+					
+				}catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnSave.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnSave.setBounds(475, 377, 108, 33);
+		panel_1.add(btnSave);
 	}
 }
