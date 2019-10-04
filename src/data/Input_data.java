@@ -364,9 +364,39 @@ public class Input_data {
 			public void actionPerformed(ActionEvent e) {
 				try
 				{
-					Statement data = connection.createStatement();
-					String query="insert into nlrc_data (CNum, Title, Date_app_nlrc) values ('1', '2-18-1998', '2-19-1998')";
-					data.executeUpdate(query);
+					
+					String query="insert into nlrc_data (CNum, Title, Date_app_nlrc, Date_rec_oecc, Date_rec_com, Date_app_prom, Date_mr_filed, "
+							+ "date_mr_prom, ind_code, nature_case, nature_award, amm_award, com, gender, la, "
+							+ "date_mailed, appeal_fee, bond, entry_judgment, date_entry_judg_issued, date_forwarded, courier_airbill_no, "
+							+ "remarks, app_date_or, bond_date_or) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					PreparedStatement pst=connection.prepareStatement(query);
+					pst.setString(1, textField.getText());
+					pst.setString(2, textField_1.getText());
+					pst.setString(3, textField_2.getText());
+					pst.setString(4, textField_3.getText());
+					pst.setString(5, textField_4.getText());
+					pst.setString(6, textField_5.getText());
+					pst.setString(7, textField_6.getText());
+					pst.setString(8, textField_7.getText());
+					pst.setString(9, textField_8.getText());
+					pst.setString(10, textField_9.getText());
+					pst.setString(11, textField_10.getText());
+					pst.setString(12, textField_11.getText());
+					pst.setString(13, textField_12.getText());
+					pst.setString(14, textField_13.getText());
+					pst.setString(15, textField_14.getText());
+					pst.setString(16, textField_15.getText());
+					pst.setString(17, textField_16.getText());
+//					pst.setString(18, textField_17.getText());
+//					pst.setString(19, textField_18.getText());
+//					pst.setString(20, textField_19.getText());
+//					pst.setString(21, textField_20.getText());
+//					pst.setString(22, textField_21.getText());
+//					pst.setString(23, textField_22.getText());
+//					pst.setString(24, textField_23.getText());
+//					pst.setString(25, textField_24.getText());
+					
+					pst.executeQuery();
 					
 				}catch(Exception e1)
 				{
