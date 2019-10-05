@@ -38,6 +38,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class Input_data {
 	Connection connection = null;
@@ -91,7 +94,7 @@ public class Input_data {
 	 */
 	private void initialize() {
 		frmNationalLaborRelations = new JFrame();
-		frmNationalLaborRelations.setTitle("National Labor Relations Commission(DATA)");
+		frmNationalLaborRelations.setTitle("National Labor Relations Commission 8th Division");
 		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data.class.getResource("/images/logo.png")));
 		frmNationalLaborRelations.getContentPane().setBackground(Color.DARK_GRAY);
 		frmNationalLaborRelations.setBounds(100, 100, 939, 647);
@@ -100,15 +103,15 @@ public class Input_data {
 		frmNationalLaborRelations.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.blue);
+		panel.setBackground(Color.DARK_GRAY);
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		panel.setBounds(0, 0, 933, 126);
 		frmNationalLaborRelations.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNationalLabor = new JLabel("National Labor Relations Commission");
+		JLabel lblNationalLabor = new JLabel("National Labor Relations Commission 8th Division");
 		lblNationalLabor.setBackground(Color.WHITE);
-		lblNationalLabor.setBounds(133, 56, 453, 33);
+		lblNationalLabor.setBounds(153, 57, 550, 27);
 		lblNationalLabor.setForeground(Color.WHITE);
 		lblNationalLabor.setFont(new Font("Arial", Font.BOLD, 23));
 		lblNationalLabor.setHorizontalAlignment(SwingConstants.CENTER);
@@ -132,7 +135,7 @@ public class Input_data {
 		lblpambansangKomisyonSa.setHorizontalAlignment(SwingConstants.CENTER);
 		lblpambansangKomisyonSa.setForeground(Color.WHITE);
 		lblpambansangKomisyonSa.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 15));
-		lblpambansangKomisyonSa.setBounds(133, 85, 373, 24);
+		lblpambansangKomisyonSa.setBounds(140, 85, 366, 24);
 		panel.add(lblpambansangKomisyonSa);
 		
 		JLabel label = new JLabel("");
@@ -407,5 +410,20 @@ public class Input_data {
 		btnSave.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnSave.setBounds(475, 377, 108, 33);
 		panel_1.add(btnSave);
+		
+		JMenuBar menuBar = new JMenuBar();
+		frmNationalLaborRelations.setJMenuBar(menuBar);
+		
+		JMenu mnFile = new JMenu("File");
+		mnFile.setHorizontalAlignment(SwingConstants.CENTER);
+		menuBar.add(mnFile);
+		
+		JMenuItem mntmLogout = new JMenuItem("Logout");
+		mntmLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		mnFile.add(mntmLogout);
 	}
 }

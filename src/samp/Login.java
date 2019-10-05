@@ -75,21 +75,22 @@ public class Login {
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(73, 251, 87, 23);
+		lblNewLabel.setBounds(73, 220, 87, 23);
 		frmNationalLaborRelations.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(73, 284, 87, 23);
+		lblNewLabel_1.setBounds(73, 253, 87, 23);
 		frmNationalLaborRelations.getContentPane().add(lblNewLabel_1);
 		
 		JTextField textFieldUN = new JTextField();
+		textFieldUN.setFont(new Font("Arial", Font.PLAIN, 14));
 		textFieldUN.setForeground(Color.DARK_GRAY);
 		textFieldUN.setToolTipText("");
 		textFieldUN.setHorizontalAlignment(SwingConstants.LEFT);
-		textFieldUN.setBounds(170, 251, 257, 26);
+		textFieldUN.setBounds(170, 220, 257, 26);
 		frmNationalLaborRelations.getContentPane().add(textFieldUN);
 		textFieldUN.setColumns(10);
 		
@@ -136,31 +137,32 @@ public class Login {
 				}
 			}
 		});
-		btnNewButton.setBounds(338, 323, 89, 23);
+		btnNewButton.setBounds(338, 292, 89, 23);
 		frmNationalLaborRelations.getContentPane().add(btnNewButton);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Arial", Font.PLAIN, 14));
 		passwordField.setForeground(Color.DARK_GRAY);
 		passwordField.setHorizontalAlignment(SwingConstants.LEFT);
 		passwordField.setToolTipText("");
-		passwordField.setBounds(170, 284, 257, 28);
+		passwordField.setBounds(170, 253, 257, 28);
 		frmNationalLaborRelations.getContentPane().add(passwordField);
 		
 		JLabel lblNewLabel_2 = new JLabel("NATIONAL LABOR RELATIONS COMMISSION");
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(63, 203, 375, 37);
+		lblNewLabel_2.setBounds(63, 162, 375, 37);
 		frmNationalLaborRelations.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_3.setIcon(new ImageIcon(Login.class.getResource("/images/logo.png")));
-		lblNewLabel_3.setBounds(140, 12, 218, 180);
+		lblNewLabel_3.setBounds(140, 12, 218, 139);
 		frmNationalLaborRelations.getContentPane().add(lblNewLabel_3);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(63, 237, 375, 2);
+		separator.setBounds(63, 196, 375, 2);
 		frmNationalLaborRelations.getContentPane().add(separator);
 		
 		
