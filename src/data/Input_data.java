@@ -62,8 +62,16 @@ public class Input_data {
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JTextField textField_14;
-	private JTextField textField_15;
 	private JTextField textField_16;
+	private JTextField textField_17;
+	private JTextField textField_18;
+	private JTextField textField_19;
+	private JTextField textField_20;
+	private JTextField textField_21;
+	private JTextField textField_22;
+	private JTextField textField_23;
+	private JTextField textField_24;
+	private JTextField textField_25;
 
 	/**
 	 * Launch the application.
@@ -94,18 +102,18 @@ public class Input_data {
 	 */
 	private void initialize() {
 		frmNationalLaborRelations = new JFrame();
+		frmNationalLaborRelations.setResizable(false);
 		frmNationalLaborRelations.setTitle("National Labor Relations Commission 8th Division");
 		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data.class.getResource("/images/logo.png")));
 		frmNationalLaborRelations.getContentPane().setBackground(Color.DARK_GRAY);
-		frmNationalLaborRelations.setBounds(100, 100, 939, 647);
-		frmNationalLaborRelations.setResizable(false);
+		frmNationalLaborRelations.setBounds(100, 100, 929, 779);
 		frmNationalLaborRelations.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmNationalLaborRelations.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		panel.setBounds(0, 0, 933, 126);
+		panel.setBounds(0, 0, 923, 126);
 		frmNationalLaborRelations.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -145,7 +153,7 @@ public class Input_data {
 		panel.add(label);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(0, 124, 933, 495);
+		panel_1.setBounds(0, 124, 923, 605);
 		frmNationalLaborRelations.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -294,26 +302,26 @@ public class Input_data {
 		textField_11.setBounds(213, 278, 206, 26);
 		panel_1.add(textField_11);
 		
-		JLabel lblcom = new JLabel("(COM)           :");
+		JLabel lblcom = new JLabel("(COM)                                  :");
 		lblcom.setHorizontalAlignment(SwingConstants.CENTER);
 		lblcom.setFont(new Font("Arial", Font.BOLD, 14));
-		lblcom.setBounds(475, 278, 110, 26);
+		lblcom.setBounds(475, 278, 193, 26);
 		panel_1.add(lblcom);
 		
 		textField_12 = new JTextField();
 		textField_12.setColumns(10);
-		textField_12.setBounds(595, 278, 206, 26);
+		textField_12.setBounds(678, 279, 206, 26);
 		panel_1.add(textField_12);
 		
-		JLabel lblLa = new JLabel("LA                 :");
+		JLabel lblLa = new JLabel("LA                                        :");
 		lblLa.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLa.setFont(new Font("Arial", Font.BOLD, 14));
-		lblLa.setBounds(475, 315, 108, 26);
+		lblLa.setBounds(475, 315, 193, 26);
 		panel_1.add(lblLa);
 		
 		textField_13 = new JTextField();
 		textField_13.setColumns(10);
-		textField_13.setBounds(595, 315, 206, 26);
+		textField_13.setBounds(678, 316, 206, 26);
 		panel_1.add(textField_13);
 		
 		JLabel lblDateMailedBy = new JLabel("Date mailed by RAB/SRAB :");
@@ -331,29 +339,18 @@ public class Input_data {
 		separator_1.setBackground(Color.LIGHT_GRAY);
 		separator_1.setForeground(Color.DARK_GRAY);
 		separator_1.setOrientation(SwingConstants.VERTICAL);
-		separator_1.setBounds(449, 57, 2, 393);
+		separator_1.setBounds(449, 57, 2, 434);
 		panel_1.add(separator_1);
 		
-		JLabel lblFemale = new JLabel("Female    :");
-		lblFemale.setHorizontalAlignment(SwingConstants.CENTER);
-		lblFemale.setFont(new Font("Arial", Font.BOLD, 14));
-		lblFemale.setBounds(10, 315, 80, 26);
-		panel_1.add(lblFemale);
-		
-		textField_15 = new JTextField();
-		textField_15.setColumns(10);
-		textField_15.setBounds(100, 315, 110, 26);
-		panel_1.add(textField_15);
-		
-		JLabel lblMale = new JLabel("Male      :");
+		JLabel lblMale = new JLabel("Gender                                 :");
 		lblMale.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMale.setFont(new Font("Arial", Font.BOLD, 14));
-		lblMale.setBounds(213, 315, 80, 26);
+		lblMale.setBounds(10, 315, 193, 26);
 		panel_1.add(lblMale);
 		
 		textField_16 = new JTextField();
 		textField_16.setColumns(10);
-		textField_16.setBounds(303, 315, 116, 26);
+		textField_16.setBounds(213, 315, 206, 26);
 		panel_1.add(textField_16);
 		
 		JSeparator separator_2 = new JSeparator();
@@ -370,8 +367,8 @@ public class Input_data {
 					
 					String query="insert into nlrc_data (CNum, Title, Date_app_nlrc, Date_rec_oecc, Date_rec_com, Date_app_prom, Date_mr_filed, "
 							+ "date_mr_prom, ind_code, nature_case, nature_award, amm_award, com, gender, la, "
-							+ "date_mailed, appeal_fee, bond, entry_judgment, date_entry_judg_issued, date_forwarded, courier_airbill_no, "
-							+ "remarks, app_date_or, bond_date_or) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+							+ "date_mailed,appeal_fee, app_date_or, bond, bond_date_or, entry_judgment, date_entry_judg_issued, date_forwarded, courier_airbill_no,"
+							+ "remarks) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 					PreparedStatement pst=connection.prepareStatement(query);
 					pst.setString(1, textField.getText());
 					pst.setString(2, textField_1.getText());
@@ -387,19 +384,21 @@ public class Input_data {
 					pst.setString(12, textField_11.getText());
 					pst.setString(13, textField_12.getText());
 					pst.setString(14, textField_13.getText());
-					pst.setString(15, textField_14.getText());
-					pst.setString(16, textField_15.getText());
-					pst.setString(17, textField_16.getText());
-//					pst.setString(18, textField_17.getText());
-//					pst.setString(19, textField_18.getText());
-//					pst.setString(20, textField_19.getText());
-//					pst.setString(21, textField_20.getText());
-//					pst.setString(22, textField_21.getText());
-//					pst.setString(23, textField_22.getText());
-//					pst.setString(24, textField_23.getText());
-//					pst.setString(25, textField_24.getText());
+					pst.setString(15, textField_16.getText());
+//					pst.setString(16, textField_15.getText());
+					pst.setString(16, textField_14.getText());
+					pst.setString(17, textField_17.getText());
+					pst.setString(18, textField_18.getText());
+					pst.setString(19, textField_19.getText());
+					pst.setString(20, textField_20.getText());
+					pst.setString(21, textField_21.getText());
+					pst.setString(22, textField_22.getText());
+					pst.setString(23, textField_23.getText());
+					pst.setString(24, textField_24.getText());
+					pst.setString(25, textField_25.getText());
 					
-					pst.executeQuery();
+					pst.execute();
+					pst.close();
 					
 				}catch(Exception e1)
 				{
@@ -408,8 +407,107 @@ public class Input_data {
 			}
 		});
 		btnSave.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnSave.setBounds(475, 377, 108, 33);
+		btnSave.setBounds(777, 534, 108, 33);
 		panel_1.add(btnSave);
+		
+		JLabel lblAppealFee = new JLabel("Appeal fee                           :");
+		lblAppealFee.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAppealFee.setFont(new Font("Arial", Font.BOLD, 14));
+		lblAppealFee.setBounds(10, 389, 194, 26);
+		panel_1.add(lblAppealFee);
+		
+		textField_17 = new JTextField();
+		textField_17.setColumns(10);
+		textField_17.setBounds(213, 390, 206, 26);
+		panel_1.add(textField_17);
+		
+		JLabel lblDateorNo = new JLabel("Date/OR No.                        :");
+		lblDateorNo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateorNo.setFont(new Font("Arial", Font.BOLD, 14));
+		lblDateorNo.setBounds(475, 389, 193, 26);
+		panel_1.add(lblDateorNo);
+		
+		textField_18 = new JTextField();
+		textField_18.setColumns(10);
+		textField_18.setBounds(678, 390, 206, 26);
+		panel_1.add(textField_18);
+		
+		JLabel lblBond = new JLabel("Bond                                    :");
+		lblBond.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBond.setFont(new Font("Arial", Font.BOLD, 14));
+		lblBond.setBounds(10, 426, 194, 26);
+		panel_1.add(lblBond);
+		
+		textField_19 = new JTextField();
+		textField_19.setColumns(10);
+		textField_19.setBounds(213, 427, 206, 26);
+		panel_1.add(textField_19);
+		
+		JLabel lblDateorNo_1 = new JLabel("Date/OR No.                        :");
+		lblDateorNo_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateorNo_1.setFont(new Font("Arial", Font.BOLD, 14));
+		lblDateorNo_1.setBounds(475, 426, 193, 26);
+		panel_1.add(lblDateorNo_1);
+		
+		textField_20 = new JTextField();
+		textField_20.setColumns(10);
+		textField_20.setBounds(678, 427, 206, 26);
+		panel_1.add(textField_20);
+		
+		JLabel lblEntryOfJudgment = new JLabel("Entry of Judgment             :");
+		lblEntryOfJudgment.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEntryOfJudgment.setFont(new Font("Arial", Font.BOLD, 14));
+		lblEntryOfJudgment.setBounds(10, 463, 194, 26);
+		panel_1.add(lblEntryOfJudgment);
+		
+		textField_21 = new JTextField();
+		textField_21.setColumns(10);
+		textField_21.setBounds(213, 464, 206, 26);
+		panel_1.add(textField_21);
+		
+		JLabel lblDataEntryOf = new JLabel("Date Entry of Judgment  Issued :");
+		lblDataEntryOf.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDataEntryOf.setFont(new Font("Arial", Font.BOLD, 14));
+		lblDataEntryOf.setBounds(475, 463, 230, 26);
+		panel_1.add(lblDataEntryOf);
+		
+		textField_22 = new JTextField();
+		textField_22.setColumns(10);
+		textField_22.setBounds(715, 464, 169, 26);
+		panel_1.add(textField_22);
+		
+		JLabel lblDateForwardedTo = new JLabel("Date Forwarded to RAB    :");
+		lblDateForwardedTo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDateForwardedTo.setFont(new Font("Arial", Font.BOLD, 14));
+		lblDateForwardedTo.setBounds(10, 500, 194, 26);
+		panel_1.add(lblDateForwardedTo);
+		
+		textField_23 = new JTextField();
+		textField_23.setColumns(10);
+		textField_23.setBounds(213, 501, 206, 26);
+		panel_1.add(textField_23);
+		
+		JLabel lblCourierAirbillNo = new JLabel("Courier Airbill No.              :");
+		lblCourierAirbillNo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCourierAirbillNo.setFont(new Font("Arial", Font.BOLD, 14));
+		lblCourierAirbillNo.setBounds(475, 500, 194, 26);
+		panel_1.add(lblCourierAirbillNo);
+		
+		textField_24 = new JTextField();
+		textField_24.setColumns(10);
+		textField_24.setBounds(678, 501, 206, 26);
+		panel_1.add(textField_24);
+		
+		JLabel lblRemarks = new JLabel("Remarks                             :");
+		lblRemarks.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRemarks.setFont(new Font("Arial", Font.BOLD, 14));
+		lblRemarks.setBounds(10, 537, 194, 26);
+		panel_1.add(lblRemarks);
+		
+		textField_25 = new JTextField();
+		textField_25.setColumns(10);
+		textField_25.setBounds(213, 538, 206, 26);
+		panel_1.add(textField_25);
 		
 		JMenuBar menuBar = new JMenuBar();
 		frmNationalLaborRelations.setJMenuBar(menuBar);
