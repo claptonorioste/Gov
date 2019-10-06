@@ -42,7 +42,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-public class Input_data {
+public class Input_data2 {
 	Connection connection = null;
 	
 
@@ -80,7 +80,7 @@ public class Input_data {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Input_data window = new Input_data();
+					Input_data2 window = new Input_data2();
 					window.frmNationalLaborRelations.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -92,7 +92,7 @@ public class Input_data {
 	/**
 	 * Create the application.
 	 */
-	public Input_data() {
+	public Input_data2() {
 		initialize();
 		connection=dbConnection.dbConnector();
 	}
@@ -104,11 +104,12 @@ public class Input_data {
 		frmNationalLaborRelations = new JFrame();
 		frmNationalLaborRelations.setResizable(false);
 		frmNationalLaborRelations.setTitle("National Labor Relations Commission 8th Division");
-		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data.class.getResource("/images/logo.png")));
+		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data2.class.getResource("/images/logo.png")));
 		frmNationalLaborRelations.getContentPane().setBackground(Color.DARK_GRAY);
 		frmNationalLaborRelations.setBounds(100, 100, 929, 779);
 		frmNationalLaborRelations.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmNationalLaborRelations.getContentPane().setLayout(null);
+		frmNationalLaborRelations.setVisible(true);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
@@ -148,7 +149,7 @@ public class Input_data {
 		
 		JLabel label = new JLabel("");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 8));
-		label.setIcon(new ImageIcon(Input_data.class.getResource("/images/logo.png")));
+		label.setIcon(new ImageIcon(Input_data2.class.getResource("/images/logo.png")));
 		label.setBounds(29, 11, 100, 100);
 		panel.add(label);
 		
@@ -407,7 +408,7 @@ public class Input_data {
 			}
 		});
 		btnSave.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnSave.setBounds(622, 537, 108, 33);
+		btnSave.setBounds(630, 537, 108, 33);
 		panel_1.add(btnSave);
 		
 		JLabel lblAppealFee = new JLabel("Appeal fee                           :");

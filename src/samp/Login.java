@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import data.Input_data;
+import data.Input_data2;
 
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -25,6 +26,8 @@ import java.awt.Window.Type;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.Toolkit;
 import javax.swing.JSeparator;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Login {
 
@@ -94,43 +97,36 @@ public class Login {
 		frmNationalLaborRelations.getContentPane().add(textFieldUN);
 		textFieldUN.setColumns(10);
 		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"admin", "user"}));
+		comboBox.setBounds(170, 292, 89, 22);
+		frmNationalLaborRelations.getContentPane().add(comboBox);
+		
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try
 				{
-					String query="select * from employee_info where username=? and password=? ";
+					String query="select * from employee_info where username=? and password=? and userType=?";
 					PreparedStatement pst=connection.prepareStatement(query);
 					pst.setString(1, textFieldUN.getText());
 					pst.setString(2, passwordField.getText());
+					pst.setString(3, String.valueOf(comboBox.getSelectedItem()));
 					
 					ResultSet rs=pst.executeQuery();
-					int count=0;
-					while(rs.next()) {
-						count=count+1;
+					
+					if(rs.next()) {
+						JOptionPane.showMessageDialog(null, "Logged as "+rs.getString("userType"));
+						if(comboBox.getSelectedIndex()==0) {
+							Input_data a = new Input_data();
+							a.main(null);
+						}else if(comboBox.getSelectedIndex()==1) {
+							Input_data a = new Input_data();
+							a.main(null);
+						}
+					}else {
+						JOptionPane.showMessageDialog(null, "Username and Password doest not match!");
 					}
-					if(count ==1)
-					{
-						frmNationalLaborRelations.setVisible(false);
-//						JOptionPane.showMessageDialog(null, "Username and Password is Correct!");
-						Input_data m = new Input_data();
-						m.main(null);
-						
-						
-					}
-					else if(count>1)
-					{
-						JOptionPane.showMessageDialog(null, "Duplicate Username and Password!");
-					}
-					else if(count!=1)
-					{
-						JOptionPane.showMessageDialog(null, "Username and Password is Incorrect!");
-					}
-					else {
-						JOptionPane.showMessageDialog(null, "Username and Password Does not Exist!");
-					}
-					rs.close();
-					pst.close();
 				}catch(Exception e1)
 				{
 					JOptionPane.showMessageDialog(null, e1);
@@ -164,6 +160,8 @@ public class Login {
 		JSeparator separator = new JSeparator();
 		separator.setBounds(63, 196, 375, 2);
 		frmNationalLaborRelations.getContentPane().add(separator);
+		
+		
 		
 		
 	}

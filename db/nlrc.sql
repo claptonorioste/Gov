@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2019 at 05:45 PM
+-- Generation Time: Oct 06, 2019 at 06:20 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -33,17 +33,17 @@ CREATE TABLE `employee_info` (
   `Name` text NOT NULL,
   `Surename` text NOT NULL,
   `Username` text NOT NULL,
-  `Password` text NOT NULL
+  `Password` text NOT NULL,
+  `userType` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee_info`
 --
 
-INSERT INTO `employee_info` (`EID`, `Name`, `Surename`, `Username`, `Password`) VALUES
-(1, 'John', 'Boner', 'editor', '123'),
-(2, 'Nel', 'Joy', 'admin', '123'),
-(3, 'hellen', 'lenlen', 'editorr', '123');
+INSERT INTO `employee_info` (`EID`, `Name`, `Surename`, `Username`, `Password`, `userType`) VALUES
+(1, 'John', 'Boner', 'editor', '123', 'user'),
+(2, 'Nel', 'Joy', 'admin', '123', 'admin');
 
 -- --------------------------------------------------------
 
@@ -63,21 +63,28 @@ CREATE TABLE `nlrc_data` (
   `ind_code` int(255) NOT NULL,
   `nature_case` varchar(255) NOT NULL,
   `nature_award` varchar(255) NOT NULL,
-  `amm_award` int(255) NOT NULL,
+  `amm_award` int(11) NOT NULL,
   `com` varchar(255) NOT NULL,
   `gender` text NOT NULL,
   `la` varchar(255) NOT NULL,
   `date_mailed` date NOT NULL,
-  `appeal_fee` int(255) NOT NULL,
+  `appeal_fee` int(11) NOT NULL,
   `bond` varchar(255) NOT NULL,
   `entry_judgment` varchar(255) NOT NULL,
   `date_entry_judg_issued` date NOT NULL,
   `date_forwarded` date NOT NULL,
-  `courier_airbill_no` int(255) NOT NULL,
+  `courier_airbill_no` int(11) NOT NULL,
   `remarks` varchar(255) NOT NULL,
   `app_date_or` date NOT NULL,
   `bond_date_or` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `nlrc_data`
+--
+
+INSERT INTO `nlrc_data` (`CNum`, `Title`, `Date_app_nlrc`, `Date_rec_oecc`, `Date_rec_com`, `Date_app_prom`, `Date_mr_filed`, `date_mr_prom`, `ind_code`, `nature_case`, `nature_award`, `amm_award`, `com`, `gender`, `la`, `date_mailed`, `appeal_fee`, `bond`, `entry_judgment`, `date_entry_judg_issued`, `date_forwarded`, `courier_airbill_no`, `remarks`, `app_date_or`, `bond_date_or`) VALUES
+(1, 'test', '2019-10-10', '2019-10-10', '2019-10-10', '2019-10-10', '2019-10-10', '2019-10-10', 1231231, 'asdasdasd', 'adasdasd', 31321313, 'asdasdasdasd', 'asdasdasdasd', 'male', '2019-10-10', 111111111, '1111111111111', 'adasdasdasd', '2019-10-10', '2019-10-10', 1111111, 'adasdasdasd', '2019-10-10', '2019-10-10');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +116,7 @@ ALTER TABLE `employee_info`
 -- AUTO_INCREMENT for table `nlrc_data`
 --
 ALTER TABLE `nlrc_data`
-  MODIFY `CNum` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CNum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
