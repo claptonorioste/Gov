@@ -3,22 +3,19 @@ package samp;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
-
-import javax.swing.JFrame;
 import java.awt.Toolkit;
-import javax.swing.GroupLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.border.EtchedBorder;
-
-import data.Input_data;
-
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.border.EtchedBorder;
+
+import data.Input_data;
 
 public class Admin {
 
@@ -114,6 +111,7 @@ public class Admin {
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setToolTipText("Admin");
 		btnNewButton_1.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent e) {
 				Input_data a = new Input_data();
 				a.main(null);
