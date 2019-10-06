@@ -109,7 +109,6 @@ public class Input_data2 {
 		frmNationalLaborRelations.setBounds(100, 100, 929, 779);
 		frmNationalLaborRelations.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmNationalLaborRelations.getContentPane().setLayout(null);
-		frmNationalLaborRelations.setVisible(true);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);

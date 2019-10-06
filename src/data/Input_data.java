@@ -107,7 +107,6 @@ public class Input_data {
 		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Input_data.class.getResource("/images/logo.png")));
 		frmNationalLaborRelations.getContentPane().setBackground(Color.DARK_GRAY);
 		frmNationalLaborRelations.setBounds(100, 100, 929, 779);
-		frmNationalLaborRelations.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmNationalLaborRelations.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
@@ -513,21 +512,5 @@ public class Input_data {
 		btnDisplay.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnDisplay.setBounds(776, 537, 108, 33);
 		panel_1.add(btnDisplay);
-		
-		JMenuBar menuBar = new JMenuBar();
-		frmNationalLaborRelations.setJMenuBar(menuBar);
-		
-		JMenu mnFile = new JMenu("   File   ");
-		mnFile.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-		mnFile.setHorizontalAlignment(SwingConstants.CENTER);
-		menuBar.add(mnFile);
-		
-		JMenuItem mntmLogout = new JMenuItem("Logout");
-		mntmLogout.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		mnFile.add(mntmLogout);
 	}
 }

@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import data.Input_data;
 import data.Input_data2;
+import samp.Admin;
 
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -118,10 +119,12 @@ public class Login {
 					if(rs.next()) {
 						JOptionPane.showMessageDialog(null, "Logged as "+rs.getString("userType"));
 						if(comboBox.getSelectedIndex()==0) {
-							Input_data a = new Input_data();
+							frmNationalLaborRelations.setVisible(false);
+							Admin a = new Admin();
 							a.main(null);
 						}else if(comboBox.getSelectedIndex()==1) {
-							Input_data a = new Input_data();
+							frmNationalLaborRelations.setVisible(false);
+							Input_data2 a = new Input_data2();
 							a.main(null);
 						}
 					}else {
