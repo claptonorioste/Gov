@@ -7,7 +7,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="E:/Downloads/mysql-connector.jar"/>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="lib" path="E:/Downloads/mysql-connector-java-5.1.0/mysql-connector-java-5.1.0-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Downloads/rs2xml.jar"/>
+	<classpathentry kind="lib" path="resources/mysql-connector.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

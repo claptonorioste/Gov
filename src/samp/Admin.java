@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
 
+import data.Cases;
 import data.Input_data;
 
 public class Admin {
@@ -122,6 +123,13 @@ public class Admin {
 		frmNationalLaborRelations.getContentPane().add(btnNewButton_1);
 		
 		JButton button = new JButton("");
+		button.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
+			public void actionPerformed(ActionEvent e) {
+				Cases c = new Cases();
+				c.main(null);
+			}
+		});
 		button.setToolTipText("Database");
 		button.setIcon(new ImageIcon(Admin.class.getResource("/images/db.png")));
 		button.setBounds(307, 185, 133, 109);
