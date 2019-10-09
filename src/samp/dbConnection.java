@@ -10,7 +10,7 @@ public class dbConnection {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.1.4:3306/nlrc","root","");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.0.11:3306/nlrc","root","");
 //			JOptionPane.showMessageDialog(null, "Connection Successfully Established!");
 			return conn;
 		}catch(Exception e)

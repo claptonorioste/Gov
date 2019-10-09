@@ -45,7 +45,6 @@ public class Login {
 	}
 	
 	Connection connection = null;
-	@SuppressWarnings("unused")
 	private JTextField textField;
 	private JPasswordField passwordField;
 
@@ -60,7 +59,6 @@ public class Login {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void initialize() {
 		frmNationalLaborRelations = new JFrame();
 		frmNationalLaborRelations.setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/images/logo.png")));
@@ -101,7 +99,6 @@ public class Login {
 		
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.addActionListener(new ActionListener() {
-			@SuppressWarnings({ "static-access", "deprecation" })
 			public void actionPerformed(ActionEvent e) {
 				try
 				{
